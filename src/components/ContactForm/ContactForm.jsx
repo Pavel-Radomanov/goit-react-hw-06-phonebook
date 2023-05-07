@@ -25,12 +25,12 @@ const ContactForm = () => {
       number,
     };
     const enterContacts = contacts.some(
-      contact =>
-        (contact.name === name.toLowerCase() && contact.number === number) ||
-        contact.number === number
+      contact => contact => contact.name.toLowerCase() === name.toLowerCase()
+      // (contact.name.toLowerCase() === name.toLowerCase() && contact.number === number) ||
+      // contact.number === number
     );
     enterContacts
-      ? alert(`${name} or ${number} is already exists`)
+      ? alert(`${name}  is already exists`)
       : dispatch(addContact(contact));
 
     setName('');
