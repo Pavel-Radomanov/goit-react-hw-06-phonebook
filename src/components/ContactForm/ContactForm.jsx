@@ -25,7 +25,7 @@ const ContactForm = () => {
       number,
     };
     const enterContacts = contacts.some(
-      contact => contact => contact.name.toLowerCase() === name.toLowerCase()
+      contact => contact.name.toLowerCase() === name.toLowerCase()
       // (contact.name.toLowerCase() === name.toLowerCase() && contact.number === number) ||
       // contact.number === number
     );
